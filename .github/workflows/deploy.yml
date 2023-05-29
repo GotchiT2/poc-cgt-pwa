@@ -54,4 +54,4 @@ jobs:
         with:
           server: '${{ secrets.CAPROVER_SERVER }}'
           app: '${{ secrets.APP_NAME_FRONT }}'
-          token: 'd4fd70f8466974c828e8ec9b48f738bf7431498096da58e96c02b5c2dcd984c9'
+          token: '${{ secrets.APP_TOKEN_FRONT }}'
