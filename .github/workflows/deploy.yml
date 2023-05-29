@@ -17,11 +17,6 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-      
-      - name: "check is APP_TOKEN_FRONT exists"
-        env: 
-            SECRET: ${{ secrets.APP_TOKEN_FRONT }}
-        run: 'echo $SECRET'
 
       - name: Setup NodeJS ${{ matrix.node-version }}
         uses: actions/setup-node@v3
@@ -57,4 +52,4 @@ jobs:
         with:
           server: '${{ secrets.CAPROVER_SERVER }}'
           app: '${{ secrets.APP_NAME_FRONT }}'
-          token: '${{ env.SECRET }}'
+          token: '${{ secrets.APP_TOKEN_FRONT }}'
