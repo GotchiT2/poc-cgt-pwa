@@ -21,7 +21,6 @@ jobs:
       - name: "check is APP_TOKEN_FRONT exists"
         env: 
             SECRET: ${{ secrets.APP_TOKEN_FRONT }}
-        if: ${{ env.SECRET == '' }}
         run: 'echo $SECRET'
 
       - name: Setup NodeJS ${{ matrix.node-version }}
