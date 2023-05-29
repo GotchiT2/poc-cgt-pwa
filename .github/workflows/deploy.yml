@@ -41,10 +41,10 @@ jobs:
       - uses: a7ul/tar-action@master
         with:
           command: c
-          cwd: "./"
+          cwd: "./cgt-front-2"
           files: |
-            cgt-front-2/dist/
-            cgt-front-2/captain-definition
+            dist/
+            captain-definition
           outPath: deploy.tar
 
       - name: Deploy Front App to CapRover
