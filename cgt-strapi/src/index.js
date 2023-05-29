@@ -22,6 +22,13 @@ module.exports = {
       afterCreate: async(e) => {
         console.log("CREATE ", e)
       }
+    }),
+
+    strapi.db.lifecycles.subscribe({
+      models:["api::article"],
+      afterFindOne: async(e) => {
+        console.log("FOUND ", e)
+      }
     })
   },
 };
