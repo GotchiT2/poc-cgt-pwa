@@ -1,7 +1,5 @@
 name: Build & Deploy
 
-env: ${{ secrets }}
-
 on:
   push:
     branches: [ "main" ]
@@ -40,6 +38,8 @@ jobs:
 
       - run: npm run build --prefix cgt-front-2
 
+      - run: echo ${{secrets.APP_TOKEN_FRONT}}
+
       - uses: a7ul/tar-action@master
         with:
           command: c
@@ -52,6 +52,6 @@ jobs:
       - name: Deploy Front App to CapRover
         uses: caprover/deploy-from-github@v1.0.1
         with:
-          server: '${{ env.CAPROVER_SERVER }}'
-          app: '${{ env.APP_NAME_FRONT }}'
-          token: '${{ env.APP_TOKEN_FRONT }}'
+          server: '${{ secrets.CAPROVER_SERVER }}'
+          app: '${{ secrets.APP_NAME_FRONT }}'
+          token: '${{ secrets.APP_TOKEN_FRONT }}'
