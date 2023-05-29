@@ -50,6 +50,6 @@ jobs:
       - name: Deploy Front App to CapRover
         uses: caprover/deploy-from-github@v1.0.1
         with:
+          token: '${{ secrets.APP_TOKEN_FRONT }}'
           server: '${{ secrets.CAPROVER_SERVER }}'
           app: '${{ secrets.APP_NAME_FRONT }}'
-          token: '${{ secrets.APP_TOKEN }}'
