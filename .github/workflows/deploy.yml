@@ -58,4 +58,4 @@ jobs:
         with:
           server: '${{ secrets.CAPROVER_SERVER }}'
           app: '${{ secrets.APP_NAME_FRONT }}'
-          token: '${{ env.APP_TOKEN_FRONT }}'
+          token: '${{ env.super_secret }}'
