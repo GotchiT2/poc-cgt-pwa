@@ -1,0 +1,9 @@
+{
+  "routes": [
+    {
+      "method": "PUT",
+      "path": "/articles/:id/add-like",
+      "handler": "article.addLike"
+    }
+  ]
+}
