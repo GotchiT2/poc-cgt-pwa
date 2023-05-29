@@ -43,8 +43,8 @@ jobs:
           command: c
           cwd: "./"
           files: |
-            dist/
-            captain-definition
+            cgt-front-2/dist/
+            cgt-front-2/captain-definition
           outPath: deploy.tar
 
       - name: Deploy Front App to CapRover
