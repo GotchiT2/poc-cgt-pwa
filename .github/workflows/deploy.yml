@@ -20,9 +20,9 @@ jobs:
       
       - name: "check is APP_TOKEN_FRONT exists"
         env: 
-            super_secret: ${{ secrets.APP_TOKEN_FRONT }}
-        if: ${{ env.super_secret == '' }}
-        run: 'echo "echo the secret \"MY_SECRET\" has not been made; echo please go to \"settings \> secrets \> actions\" to create it"'
+            SECRET: ${{ secrets.APP_TOKEN_FRONT }}
+        if: ${{ env.SECRET == '' }}
+        run: 'echo $SECRET'
 
       - name: Setup NodeJS ${{ matrix.node-version }}
         uses: actions/setup-node@v3
@@ -58,4 +58,4 @@ jobs:
         with:
           server: '${{ secrets.CAPROVER_SERVER }}'
           app: '${{ secrets.APP_NAME_FRONT }}'
-          token: '${{ env.super_secret }}'
+          token: '${{ env.SECRET }}'
