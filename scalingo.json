@@ -1,0 +1,11 @@
+{
+  "builds": [
+    {
+      "path": "cgt-strapi",
+      "name": "cgt-strapi",
+      "buildpacks": [
+        "heroku/nodejs"
+      ]
+    }
+  ]
+}
